@@ -15,7 +15,6 @@ file1=open('Horoscope.pkl','rb')
 model=pickle.load(file1)
 file1.close()
 
-
 st.title("Popat says")
 
 Name=st.text_input("Enter your name")
@@ -54,19 +53,19 @@ if st.button("Panditji's Popat says"):
          
     query=np.array([Sex,Month,Day,Num]).reshape(1,-1)   
     
-    prediction=model.predict(query)[0]
+    try:
+        prediction=model.predict(query)[0]  
     
-    st.write(" So the Popat says " +
+        st.write(" So the Popat says " +
              str(prediction))
-else:
-    st.error("Oops!Something went wrong! Are you sure you have entered the right information?")        
+    except ValueError:
+        st.error("Oops!Something went wrong! Are you sure you have entered the right information?")        
         
-if st.button("Click if you agree with Popat"):   
+if st.button("Click if you agree with Popat"):     
     st.balloons()
     st.success("Thank you")
 
-else:
-    st.error("Oops!Something went wrong! Are you sure you have entered the right information?")
+
 
    
         
