@@ -19,15 +19,15 @@ st.title("Popat says")
 
 Name=st.text_input("Enter your name")
 
-Gender=st.selectbox("Gender",['Male','female'])
+Gender=st.selectbox("Gender",['Male','Female'])
 
 Date_input=st.text_input("Enter your date of birth in yyyy-mm-dd format")
 
 if Date_input:
     try:
-        valid_date=datetime.strptime(Date_input,"%Y-%m-%d")
-        st.success(f"You were born on{valid_date.date()}")
-    except Valueerror:
+        valid_date=datetime.strptime(Date_input,"%Y-%m-%d").date()
+        st.success(f"You were born on{valid_date}")
+    except ValueError:
         st.error("Invalid birth date.Read the instruction again")
         
 Time_input=st.text_input("Enter time of your birth  in 00:00:00 format")
@@ -36,7 +36,7 @@ if Time_input:
     try:
         valid_time=datetime.strptime(Time_input,"%H:%M:%S").time()
         st.success(f"You were born on{valid_time}")
-    except Valueerror:
+    except ValueError:
         st.error("Invalid birth time.Read the instructions again")
         
         
