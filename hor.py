@@ -51,8 +51,7 @@ if st.button("Panditji's Popat says"):
     
     Num=((pd.to_datetime(Time_input,format='%H:%M:%S')-pd.to_datetime("00:00:00",format="%H:%M:%S")).total_seconds())/60
     
-    Horoscope.loc[len(Horoscope)]=[Name,Gender,Date_input,Time_input]    
-        
+         
     querey=np.array([Sex,Month,Day,Num]).reshape(1,-1)   
     
     prediction=model.predict(query)[0]
