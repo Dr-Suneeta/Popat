@@ -61,7 +61,7 @@ if st.button("Panditji's Popat says"):
         
         
 if st.button("Click if you agree with Popat"):   
-    st.ballon()
+    st.ballons()
     st.success("Thank you")
    
         
