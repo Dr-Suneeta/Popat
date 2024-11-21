@@ -7,7 +7,7 @@ Created on Thu Nov 21 18:02:13 2024
 
 import pandas as pd
 import numpy as np
-import pickle5 as pickle
+import pickle as pickle
 import streamlit as st
 
 file1=open('Horoscope.pkl','rb')
