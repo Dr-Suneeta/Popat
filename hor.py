@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import pickle as pickle
 import streamlit as st
+from datetime import datetime
 
 file1=open('Horoscope.pkl','rb')
 model=pickle.load(file1)
