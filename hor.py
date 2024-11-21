@@ -58,13 +58,15 @@ if st.button("Panditji's Popat says"):
     
     st.write(" So the Popat says " +
              str(prediction))
-        
+else:
+    st.error("Oops!Something went wrong! Are you sure you have entered the right information?")        
         
 if st.button("Click if you agree with Popat"):   
     st.balloons()
     st.success("Thank you")
 
-st.error("Oops!Something went wrong! Are you sure you have entered the right information?")
+else:
+    st.error("Oops!Something went wrong! Are you sure you have entered the right information?")
 
    
         
