@@ -63,6 +63,9 @@ if st.button("Panditji's Popat says"):
 if st.button("Click if you agree with Popat"):   
     st.balloons()
     st.success("Thank you")
+
+st.error("Oops!Something went wrong! Are you sure you have entered the right information?")
+
    
         
         
