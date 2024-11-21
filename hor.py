@@ -60,7 +60,7 @@ if st.button("Panditji's Popat says"):
              str(prediction))
         
         
-if st.button("Click if you agree with Popat")   
+if st.button("Click if you agree with Popat"):   
     st.ballon()
     st.success("Thank you")
    
